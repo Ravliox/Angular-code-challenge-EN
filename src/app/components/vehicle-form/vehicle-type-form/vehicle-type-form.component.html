@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <label class="block mt-4" >
+    <span class="text-gray-700">Van welk type voertuig wilt u voertuiginformatie opzoeken?</span>
+    <select formControlName="vehicleType" class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" name="vehicle-type">
+      <option *ngFor="let option of typeOptions" [ngValue]="option.value"> {{ option.label }} </option>
+    </select>
+  </label>
+  
+    <!-- SELECT VEHICLE SUBTYPE-->
+  <label class="block mt-4" >
+    <span class="text-gray-700">Welk type [auto/motor/brommer] hebt u?</span>
+    <select formControlName="subTypeVehicle" class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" name="vehicle-subtype">
+      <option *ngFor="let option of subTypeOptions" [ngValue]="option.value"> {{ option.label }} </option>
+    </select>
+  </label>
+</form>
